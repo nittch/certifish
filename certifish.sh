@@ -185,7 +185,7 @@ cat "${cn}.crt" $(basename "${ca}") > "${cn}.chained.crt"
 # generate DNSSEC/TLSA record
 
 notice "TLSA"
-notice "If you with to use DNSSEC/TLSA, add this in DNS zone (replace host with real hostname):"
+notice "If you wish to use DNSSEC/TLSA, add this in DNS zone (replace host with real hostname):"
 
 fpr=$( $openssl x509 -noout -fingerprint -sha512 < "${cn}.crt" |sed -e "s/.*=//g" | sed -e "s/\://g" )
 
